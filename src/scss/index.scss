@@ -1,0 +1,128 @@
+@import "Imports/normalize";
+@import "Imports/fonts";
+// ===Common===
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #CED1D6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// ===/Common===
+
+.weather-board{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 0 40px 15px rgb(58 73 103 / .3);
+
+    .short-info{
+        position: relative;
+        min-height: 300px;
+        width: 100%;
+        background: url(https://www.vladtime.ru/uploads/posts/2016-06/1466855827_00.jpg) no-repeat center;
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;left: 0;right: 0;bottom: 0;
+            background: linear-gradient(black, rgb(59, 30, 163), black);
+            opacity: .3;
+            z-index: 5;
+        }
+        &__city{
+            flex-grow: 1;
+            position: relative;
+            z-index: 10;
+            margin-top: 50px;
+        }
+        &__temp{
+            font-size: 5.5rem;
+            position: relative;
+            z-index: 11;
+
+            &::after{
+                position: absolute;
+                top: 25%; left: calc(100% + 5px);
+                content: '';
+                border-radius: 50%;
+                width: 5px;
+                height: 5px;
+                box-shadow: 0 0 0 5px white;
+            }
+        }
+        &__weather{
+            position: relative;
+            z-index: 12;
+            margin-bottom: 50px;
+        }
+    }
+    .info{
+        padding-block: 25px;
+        width: 100%;
+
+       &__day{
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: #848C9B;
+            width: 60%;
+            padding-block: 15px;
+            margin: 0 auto;
+            display: flex;
+            &__name{}
+            &__temp{
+                margin-left: auto;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    top: 25%; left: calc(100% + 5px);
+                    content: '';
+                    border-radius: 50%;
+                    width: 2px;
+                    height: 2px;
+                    box-shadow: 0 0 0 2px #848C9B;
+                }
+            }
+            &__weather{
+                margin-left: 20px;
+            }
+       }
+    }
+    .btn{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        width: 100%;
+        outline: none;
+        border: none;
+        background: #848C9B;
+        color: white;
+        padding-block: 25px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus{
+            background: darken(#848C9B, 5%);
+        }
+        &:active{
+            background: darken(#848C9B, 10%);
+        }
+    }
+}
