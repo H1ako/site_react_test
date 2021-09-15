@@ -29,7 +29,8 @@ body{
         position: relative;
         min-height: 300px;
         width: 100%;
-        background: url(https://www.vladtime.ru/uploads/posts/2016-06/1466855827_00.jpg) no-repeat center;
+        background-repeat: no-repeat;
+        background-position: center;
         color: white;
         font-family: "Open Sans", sans-serif;
         font-weight: 800;
@@ -85,7 +86,6 @@ body{
             padding-block: 15px;
             margin: 0 auto;
             display: flex;
-            &__name{}
             &__temp{
                 margin-left: auto;
                 position: relative;
@@ -104,6 +104,17 @@ body{
                 margin-left: 20px;
             }
        }
+    }
+    .error{
+        background: tomato;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        width: 100%;
+        padding-block: 25px;
+        text-align: center;
+        color: rgb(128, 51, 37);
+
     }
     .btn{
         font-family: "Open Sans", sans-serif;

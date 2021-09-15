@@ -365,7 +365,8 @@ body {
   position: relative;
   min-height: 300px;
   width: 100%;
-  background: url(https://www.vladtime.ru/uploads/posts/2016-06/1466855827_00.jpg) no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
@@ -441,6 +442,16 @@ body {
 }
 .weather-board .info__day__weather {
   margin-left: 20px;
+}
+.weather-board .error {
+  background: tomato;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 100%;
+  padding-block: 25px;
+  text-align: center;
+  color: #803325;
 }
 .weather-board .btn {
   font-family: "Open Sans", sans-serif;
